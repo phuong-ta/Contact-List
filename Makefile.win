@@ -1,0 +1,34 @@
+# Project: Contact
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o Contact.o ContactController.o
+LINKOBJ  = main.o Contact.o ContactController.o
+LIBS     = -L"C:/Installer/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Installer/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Installer/Dev-Cpp/TDM-GCC-64/include" -I"C:/Installer/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Installer/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"C:/Installer/Dev-Cpp/TDM-GCC-64/include" -I"C:/Installer/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Installer/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Installer/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+BIN      = Contact.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+DEL      = C:\Installer\Dev-Cpp\devcpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Contact.o: Contact.cpp
+	$(CPP) -c Contact.cpp -o Contact.o $(CXXFLAGS)
+
+ContactController.o: ContactController.cpp
+	$(CPP) -c ContactController.cpp -o ContactController.o $(CXXFLAGS)

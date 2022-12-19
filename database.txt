@@ -1,0 +1,5 @@
+Hello Moikka:moikka.hello@gmail.com:123456789:espoo:friend
+keijo:keijo@metor.fi:12345678:espoo:no
+keijo:keijo@metor.fi:12345678:espoo:Hello
+tester:tester@test.com:9897654:espoo:teacher
+tester:tester@test.com:9897654:espoo:teacher
